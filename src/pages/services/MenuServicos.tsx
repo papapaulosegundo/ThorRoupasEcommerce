@@ -39,21 +39,21 @@ export default function MenuServicos() {
       <div className="services-panel" role="menu" aria-label="Serviços">
         <Container>
           <div className="panel-grid">
-            <NavLink to="/servicos/ecommerce" className="panel-item" role="menuitem">
+            <NavLink to="/servicos/masculino" className="panel-item" role="menuitem">
               <div className="p-icon"><MdMan /></div>
               <div className="p-content">
                 <h4 className="p-title">Masculino</h4>
               </div>
             </NavLink>
 
-            <NavLink to="/servicos/websites" className="panel-item" role="menuitem">
+            <NavLink to="/servicos/feminino" className="panel-item" role="menuitem">
               <div className="p-icon"><MdWoman2 /></div>
               <div className="p-content">
                 <h4 className="p-title">Feminino</h4>
               </div>
             </NavLink>
 
-            <NavLink to="/servicos/websites" className="panel-item" role="menuitem">
+            <NavLink to="/servicos/infantil" className="panel-item" role="menuitem">
               <div className="p-icon"><TbMoodKid /></div>
               <div className="p-content">
                 <h4 className="p-title">Infantil</h4>
