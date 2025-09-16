@@ -108,7 +108,7 @@ export default function Home() {
                     atender clientes de diferentes ramos e extrair a essência para cada cliente
                     transformando a ideia em algo com vida.
                 </p>
-                <Link to="/portfolio" className="feature-cta">Ver portfólio</Link>
+                <Link to="/contato" className="feature-cta">Ver portfólio</Link>
               </article>
             </Col>
 

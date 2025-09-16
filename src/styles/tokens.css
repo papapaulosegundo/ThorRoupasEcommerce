@@ -1,0 +1,20 @@
+:root{
+  /* Brand */
+  --brand-700:#2b2e7a;
+  --brand-800:#24265f;
+
+  /* Texto */
+  --ink-900:#1f2244;
+  --ink-700:#213547;
+  --ink-600:#59607a;
+
+  /* Layout */
+  --nav-h: 80px;
+  --nav-h-shrink: 60px;
+  --container-max: 1120px;
+  --container-pad: 4vw;
+
+  /* Espaços */
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.25rem; --space-6:1.5rem;
+}

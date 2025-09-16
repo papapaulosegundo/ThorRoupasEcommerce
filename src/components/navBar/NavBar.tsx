@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Nav, Navbar} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/index.css";
-import logoImage from "../../assets/Preview.png";
+import logoImage from "../../assets/logoSally.jpeg";
 import MenuServicos from "../../pages/services/MenuServicos";
 
 export default function NavbarApp() {
@@ -37,7 +37,6 @@ export default function NavbarApp() {
           <Nav className="pillMenu">
             <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
             <MenuServicos/>
-            <Nav.Link as={NavLink} to="/portfolio">Portfólio</Nav.Link>
             <Nav.Link as={NavLink} to="/sobre">Sobre Nós</Nav.Link>
             <Nav.Link as={NavLink} to="/contato">Contato</Nav.Link>
           </Nav>

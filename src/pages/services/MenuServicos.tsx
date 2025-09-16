@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
-import { FaShoppingCart, FaGlobe } from "react-icons/fa";
 import "../../styles/index.css";
+import { MdMan, MdWoman2 } from "react-icons/md";
+import { TbMoodKid } from "react-icons/tb";
 
 export default function MenuServicos() {
   const [open, setOpen] = useState(false);
@@ -39,18 +40,23 @@ export default function MenuServicos() {
         <Container>
           <div className="panel-grid">
             <NavLink to="/servicos/ecommerce" className="panel-item" role="menuitem">
-              <div className="p-icon"><FaShoppingCart /></div>
+              <div className="p-icon"><MdMan /></div>
               <div className="p-content">
-                <h4 className="p-title">E-commerce</h4>
-                <p className="p-desc">Desenvolviemnto de lojas online e modernas para aumentar suas vendas.</p>
+                <h4 className="p-title">Masculino</h4>
               </div>
             </NavLink>
 
             <NavLink to="/servicos/websites" className="panel-item" role="menuitem">
-              <div className="p-icon"><FaGlobe /></div>
+              <div className="p-icon"><MdWoman2 /></div>
               <div className="p-content">
-                <h4 className="p-title">Websites</h4>
-                <p className="p-desc">Sites profissionais para garantir um destaque para sua marca.</p>
+                <h4 className="p-title">Feminino</h4>
+              </div>
+            </NavLink>
+
+            <NavLink to="/servicos/websites" className="panel-item" role="menuitem">
+              <div className="p-icon"><TbMoodKid /></div>
+              <div className="p-content">
+                <h4 className="p-title">Infantil</h4>
               </div>
             </NavLink>
           </div>
