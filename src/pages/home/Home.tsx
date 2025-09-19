@@ -2,9 +2,11 @@ import { Container, Row, Col, Button} from "react-bootstrap";
 import { useEffect, useState } from "react";
 import "../../styles/index.css";
 import { Link } from "react-router-dom";
-import { FaFileImage, FaLayerGroup, FaHandshake } from "react-icons/fa";
+import {  } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import CustomerLoop from "../../components/CustomerLoop/CustomerLoop";
+import { MdMan, MdWoman2 } from "react-icons/md";
+import { TbMoodKid } from "react-icons/tb";
 
 
 const HERO_IMAGES = [
@@ -81,46 +83,46 @@ export default function Home() {
         <Container>
           <header className="section-header text-center">
             <h2 className="section-heading">
-              Temos a Solução Ideal para seu Negócio
+              Temos a Peça Ideal para Você
             </h2>
           </header>
 
           <Row className="g-4 align-items-stretch">
             <Col sm={12} md={6} lg={4}>
               <article className="feature-card">
-                <div className="feature-icon"><FaFileImage /></div>
-                <h3 className="feature-title">Desenvolvimento Web</h3>
+                <div className="feature-icon"><MdMan /></div>
+                <h3 className="feature-title">Masculino</h3>
                 <p className="feature-text">
                     Com nossos sistemas reutilizaveís e o atendimento da nossa equipe
                     seu Website ficará pronto de maneira rapída, com muita efetividade
                     Venha buscar novos horizontes com o time do Thor.
                 </p>
-                <Link to="/servicos#opcoes" className="feature-cta">Ver serviços</Link>
+                <Link to="/servicos/masculino" className="feature-cta">Ver serviços</Link>
               </article>
             </Col>
 
             <Col sm={12} md={6} lg={4}>
               <article className="feature-card">
-                <div className="feature-icon"><FaLayerGroup /></div>
-                <h3 className="feature-title">Projetos</h3>
+                <div className="feature-icon"><MdWoman2 /></div>
+                <h3 className="feature-title">Feminino</h3>
                 <p className="feature-text">
                     Com nosso portfólio com clientes de diversas áreas, mostra que nós conseguimos
                     atender clientes de diferentes ramos e extrair a essência para cada cliente
                     transformando a ideia em algo com vida.
                 </p>
-                <Link to="/contato" className="feature-cta">Ver portfólio</Link>
+                <Link to="/servicos/feminino" className="feature-cta">Ver portfólio</Link>
               </article>
             </Col>
 
             <Col sm={12} md={6} lg={4}>
               <article className="feature-card">
-                <div className="feature-icon"><FaHandshake /></div>
-                <h3 className="feature-title">Seja Nosso Cliente</h3>
+                <div className="feature-icon"><TbMoodKid /></div>
+                <h3 className="feature-title">Infantil</h3>
                 <p className="feature-text">
                   Nosso clientes tem o melhor que tem no mercado de Desenvolvimento, com nossa equipe
                   você garante suporte contínuo do website, além da hospedagem e buscando sempre a evolução do seu produto!
                 </p>
-                <Link to="/contato" className="feature-cta">Fale com a gente</Link>
+                <Link to="/servicos/infantil" className="feature-cta">Fale com a gente</Link>
               </article>
             </Col>
           </Row>

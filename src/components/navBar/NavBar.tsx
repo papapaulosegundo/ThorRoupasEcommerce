@@ -37,8 +37,8 @@ export default function NavbarApp() {
           <Nav className="pillMenu">
             <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
             <MenuServicos/>
-            <Nav.Link as={NavLink} to="/sobre">Sobre Nós</Nav.Link>
             <Nav.Link as={NavLink} to="/contato">Contato</Nav.Link>
+            <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
