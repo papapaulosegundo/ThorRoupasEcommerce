@@ -7,16 +7,16 @@ type Props = {
   emphasis?: React.ReactNode;
   rest?: React.ReactNode;
   logos: Logo[];
-  speed?: number;          // segundos
-  logoHeight?: number;     // px
+  speed?: number;         
+  logoHeight?: number;    
   grayscale?: boolean;
   titleOverride?: React.ReactNode;
   className?: string;
 };
 
 export default function CustomerLoop({
-  emphasis = "+100 empresas",
-  rest = "estão prosperando no Thor",
+  emphasis = "+100 marcas",
+  rest = "para você escolher",
   logos,
   speed = 28,
   logoHeight = 44,

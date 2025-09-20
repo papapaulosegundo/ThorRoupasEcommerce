@@ -8,12 +8,11 @@ import CustomerLoop from "../../components/CustomerLoop/CustomerLoop";
 import { MdMan, MdWoman2 } from "react-icons/md";
 import { TbMoodKid } from "react-icons/tb";
 
+import slide1 from "../../assets/inicial1.jpg";
+import slide2 from "../../assets/teste.png";
+import slide3 from "../../assets/LookInfantil.jpeg";
 
-const HERO_IMAGES = [
-  new URL("../../assets/Prototipos/Montanhismo.webp", import.meta.url).href,
-  new URL("../../assets/Prototipos/Mercado.webp", import.meta.url).href,
-  new URL("../../assets/Prototipos/Farmacia.webp", import.meta.url).href,
-];
+const HERO_IMAGES = [slide1, slide2, slide3];
 
 const LOGOS = [
   { src: new URL("../../assets/logos/nestle.png", import.meta.url).href, alt: "Nestlé", href: "https://www.nestle.com/" },
@@ -131,8 +130,8 @@ export default function Home() {
 
       <section>
         <CustomerLoop
-          emphasis="+100 empresas"
-          rest="estão prosperando no Thor"
+          emphasis = "+100 marcas"
+          rest = "para você escolher"
           logos={LOGOS}
           speed={30}          
           logoHeight={30}     

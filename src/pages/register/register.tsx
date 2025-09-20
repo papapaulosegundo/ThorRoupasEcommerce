@@ -5,9 +5,9 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logoSally.jpeg";
 
-import slide1 from "../../assets/infantil.jpeg";
-import slide2 from "../../assets/masculino.jpeg";
-import slide3 from "../../assets/feminina.jpg";
+import slide1 from "../../assets/masculino2.jpg";
+import slide2 from "../../assets/feminina.jpg";
+import slide3 from "../../assets/LookInfantil.jpeg";
 
 type RegisterForm = {
   name: string;
