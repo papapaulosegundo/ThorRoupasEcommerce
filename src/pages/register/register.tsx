@@ -50,20 +50,20 @@ export default function Register() {
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      // Sem integração por enquanto. Somente navega para a Home.
-      // (se quiser validar senhas iguais, descomente abaixo)
-      // if (form.password !== form.confirm) {
-      //   alert("As senhas não coincidem.");
-      //   return;
-      // }
-      console.log("register", form);
-      navigate("/"); // vai para a Home temporariamente
-    } finally {
-      setLoading(false);
-    }
+      e.preventDefault();
+      setLoading(true);
+      try {
+        // Sem integração por enquanto. Somente navega para a Home.
+        // (se quiser validar senhas iguais, descomente abaixo)
+        // if (form.password !== form.confirm) {
+        //   alert("As senhas não coincidem.");
+        //   return;
+        // }
+        console.log("register", form);
+        navigate("/"); // vai para a Home temporariamente
+      } finally {
+        setLoading(false);
+      }
   }
 
   return (
