@@ -1,10 +1,13 @@
+// src/pages/Auth/Login.tsx
 import { useEffect, useMemo, useState } from "react";
 import { Container, Row, Col, Form, Button, Card, InputGroup } from "react-bootstrap";
 import "../../styles/index.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link, useNavigate } from "react-router-dom"; 
-import logo from "../../assets/logoSally.jpeg";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { login } from "../../services/auth";
 
+import logo from "../../assets/logoSally.jpeg";
 import slide1 from "../../assets/masculino2.jpg";
 import slide2 from "../../assets/feminina.jpg";
 import slide3 from "../../assets/LookInfantil.jpeg";
@@ -15,13 +18,11 @@ export default function Login() {
   const [form, setForm] = useState<LoginForm>({ email: "", password: "" });
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // ⬅️ hook para navegar
+  const navigate = useNavigate();
 
-  // imagens do slider
   const slides = useMemo(() => [slide1, slide2, slide3], []);
   const [idx, setIdx] = useState(0);
 
-  // troca automática a cada 8s (respeita prefers-reduced-motion)
   useEffect(() => {
     const prefersReduce =
       typeof window !== "undefined" &&
@@ -37,13 +38,22 @@ export default function Login() {
     setForm((s) => ({ ...s, [k]: v }));
   }
 
+  const err = (e: any) => e?.response?.data ?? e?.message ?? "Erro inesperado.";
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     try {
-      console.log("login", form);
-      // por enquanto só redireciona para a home
+      const { usuario, jwt } = await login(form.email.trim(), form.password);
+      // guarda sessão
+      localStorage.setItem("jwt", jwt);
+      localStorage.setItem("user", JSON.stringify(usuario));
+
+      await Swal.fire("Bem-vindo!", `${usuario.nome}`, "success");
+      // se quiser: usuario.tipo === 'admin' ? navigate('/admin') : navigate('/');
       navigate("/");
+    } catch (e) {
+      Swal.fire("Erro no login", err(e), "error");
     } finally {
       setLoading(false);
     }
@@ -52,37 +62,20 @@ export default function Login() {
   return (
     <Container fluid className="auth-split p-0">
       <Row className="g-0 min-vh-100">
-        {/* ESQUERDA ~40% com SLIDER */}
         <Col md={5} className="auth-left position-relative d-none d-md-block">
           <img src={logo} alt="Sally" className="auth-logo" />
-
-          {/* Camada de slides cobrindo 100% */}
           <div className="auth-slides" aria-hidden="true">
             {slides.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt=""
-                className={`auth-slide ${i === idx ? "is-active" : ""}`}
-                loading={i === 0 ? "eager" : "lazy"}
-              />
+              <img key={i} src={src} alt="" className={`auth-slide ${i === idx ? "is-active" : ""}`} loading={i === 0 ? "eager" : "lazy"} />
             ))}
           </div>
-
-          {/* (opcional) indicadores */}
           <div className="auth-dots">
             {slides.map((_, i) => (
-              <button
-                key={i}
-                className={`auth-dot ${i === idx ? "active" : ""}`}
-                onClick={() => setIdx(i)}
-                aria-label={`Ir para slide ${i + 1}`}
-              />
+              <button key={i} className={`auth-dot ${i === idx ? "active" : ""}`} onClick={() => setIdx(i)} aria-label={`Ir para slide ${i + 1}`} />
             ))}
           </div>
         </Col>
 
-        {/* DIREITA ~60% */}
         <Col xs={12} md={7} className="auth-right d-flex align-items-center justify-content-center">
           <Card className="auth-card auth-card-lg shadow-sm">
             <div className="mb-4 text-center">

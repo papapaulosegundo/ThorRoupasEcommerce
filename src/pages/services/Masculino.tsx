@@ -37,7 +37,6 @@ export default function MasculinoPage() {
     <>
       {/* HERO */}
       <section className="ecom-hero" />
-
       <Container className="py-4">
         {loading && (
           <div className="d-flex justify-content-center py-5">
