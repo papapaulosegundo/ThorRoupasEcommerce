@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Spinner, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { criarProduto } from "../../services/produto";
-import { listarCategorias, type Categoria } from "../../services/categoria";
-import "../../styles/index.css";
+import { criarProduto } from "../../../services/produto";
+import { listarCategorias, type Categoria } from "../../../services/categoria";
+import "../../../styles/index.css";
 
 type FormState = {
   nome: string;

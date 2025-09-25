@@ -1,8 +1,8 @@
 import { Container, Row, Col} from "react-bootstrap";
-import { FaProductHunt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../styles/index.css";
-import { FaSection } from "react-icons/fa6";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { FaList } from "react-icons/fa";
 
 /*import Swal, { SweetAlertResult } from 'sweetalert2';
 import api from '@/services/api'; // quando existir*/
@@ -15,14 +15,14 @@ export default function CadastroFormulario() {
             <Container>
                 <header className="section-header text-center">
                     <h2 className="section-heading">
-                    Temos a Peça Ideal para Você
+                    Gestão do Ecommerce
                     </h2>
                 </header>
 
                 <Row className="g-4 align-items-stretch">
-                    <Col sm={12} md={6} lg={4}>
+                    <Col sm={12} md={6} lg={6}>
                     <article className="feature-card">
-                        <div className="feature-icon"><FaSection /></div>
+                        <div className="feature-icon"><FaList /></div>
                         <h3 className="feature-title">Adicionar Categoria de Produtos</h3>
                         <p className="feature-text">
                             Adicione as categorias para seus produtos aqui! Tenha várias categorias
@@ -33,9 +33,9 @@ export default function CadastroFormulario() {
                     </article>
                     </Col>
 
-                    <Col sm={12} md={6} lg={4}>
+                    <Col sm={12} md={6} lg={6}>
                     <article className="feature-card">
-                        <div className="feature-icon"><FaProductHunt /></div>
+                        <div className="feature-icon"><MdProductionQuantityLimits /></div>
                         <h3 className="feature-title">Adicionar Produto</h3>
                         <p className="feature-text">
                             Adicione e popule produtos nas suas categorias, deixe suas categorias
@@ -46,7 +46,7 @@ export default function CadastroFormulario() {
                     </Col>
                 </Row>
             </Container>
-            </section>
+        </section>
     </>
   );
 }

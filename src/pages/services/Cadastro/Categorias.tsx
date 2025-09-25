@@ -1,15 +1,15 @@
 // src/pages/services/Categorias.tsx
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Spinner, Alert } from "react-bootstrap";
-import { criarCategoria } from "../../services/categoria";
-import type { Categoria } from "../../services/categoria";
+import { criarCategoria } from "../../../services/categoria";
+import type { Categoria } from "../../../services/categoria";
 import Swal from "sweetalert2";
-import "../../styles/index.css";
+import "../../../styles/index.css";
 
 // gera slug a partir do nome
 function slugify(s: string) {
   return s
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // remove acentos
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
@@ -71,7 +71,6 @@ export default function Categorias() {
         showConfirmButton: false,
       });
 
-      // limpa o form
       setForm({ nome: "", slug: "", descricao: "", ativo: true });
     } catch (err: any) {
       setError(err?.response?.data ?? err?.message ?? "Erro ao salvar categoria.");

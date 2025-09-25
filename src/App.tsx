@@ -7,10 +7,10 @@ import Contact from "./pages/contact/Contact";
 
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
-import CadastroFormulario from "./pages/services/CadastroProdutos";
+import CadastroFormulario from "./pages/services/OpcaoCadastro";
 import RequireAdmin from "./components/RequireAdmin";
-import Categorias from "./pages/services/Categorias";
-import Produtos from "./pages/services/Produtos";
+import Categorias from "./pages/services/Cadastro/Categorias";
+import Produtos from "./pages/services/Cadastro/Produtos";
 import CategoriaProdutosPage from "./pages/services/CategoriaProdutos";
 
 export default function App() {

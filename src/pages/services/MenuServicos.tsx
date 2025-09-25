@@ -87,7 +87,6 @@ export default function MenuServicos() {
               >
                 <div className="p-content">
                   <h4 className="p-title">{c.nome}</h4>
-                  {c.descricao && <small className="text-muted">{c.descricao}</small>}
                 </div>
               </NavLink>
             ))}

@@ -36,7 +36,7 @@ export default function NavbarApp() {
 
   function handleLogout() {
     doLogout();
-    navigate("/"); // ou para "/"
+    navigate("/"); 
   }
 
   return (
