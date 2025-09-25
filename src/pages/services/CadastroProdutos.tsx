@@ -1,6 +1,8 @@
-import { Container, Row, Col, Button, Card, Form } from "react-bootstrap";
-import { FaComments, FaEnvelope, FaPhoneAlt, FaArrowRight } from "react-icons/fa";
+import { Container, Row, Col} from "react-bootstrap";
+import { FaProductHunt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../../styles/index.css";
+import { FaSection } from "react-icons/fa6";
 
 /*import Swal, { SweetAlertResult } from 'sweetalert2';
 import api from '@/services/api'; // quando existir*/
@@ -9,84 +11,42 @@ export default function CadastroFormulario() {
 
   return (
     <>
-        {/* HERO */}
-        <section className="contact-hero">
+        <section className="home-sections">
             <Container>
-                <h1 className="title">Fale Conosco!</h1>
-                <p className="subtitle">
-                Estamos prontos para acelerar suas vendas com soluções sob medida.
-                </p>
+                <header className="section-header text-center">
+                    <h2 className="section-heading">
+                    Temos a Peça Ideal para Você
+                    </h2>
+                </header>
+
+                <Row className="g-4 align-items-stretch">
+                    <Col sm={12} md={6} lg={4}>
+                    <article className="feature-card">
+                        <div className="feature-icon"><FaSection /></div>
+                        <h3 className="feature-title">Adicionar Categoria de Produtos</h3>
+                        <p className="feature-text">
+                            Adicione as categorias para seus produtos aqui! Tenha várias categorias
+                            de produtos para seu negócio ficar bem divido e os clientes acharem o quer
+                            querem com mais facilidade!
+                        </p>
+                        <Link to="/servicos/categorias" className="feature-cta">Adicionar Categorias</Link>
+                    </article>
+                    </Col>
+
+                    <Col sm={12} md={6} lg={4}>
+                    <article className="feature-card">
+                        <div className="feature-icon"><FaProductHunt /></div>
+                        <h3 className="feature-title">Adicionar Produto</h3>
+                        <p className="feature-text">
+                            Adicione e popule produtos nas suas categorias, deixe suas categorias
+                            cheio de produtos espetaculares para seus clientes!
+                        </p>
+                        <Link to="/servicos/produtos" className="feature-cta">Adicionar Produtos</Link>
+                    </article>
+                    </Col>
+                </Row>
             </Container>
-        </section>
-
-        {/* FORMULÁRIO */}
-        <section className="contact-form-wrap">
-            <Container>
-                <Card className="contact-form-card mx-auto">
-                <Card.Body className="p-4 p-md-5">
-                    <h2 className="form-title text-center mb-4">Formulário de Contato</h2>
-
-                    <Form onSubmit={(e) => e.preventDefault()} noValidate>
-                    <Row className="g-4">
-                        <Col md={6}>
-                        <Form.Group controlId="formNome">
-                            <Form.Label> Nome <span className="req">*</span> </Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Seu nome"
-                            className="input-pill"
-                            />
-                        </Form.Group>
-                        </Col>
-
-                        <Col md={6}>
-                        <Form.Group controlId="formEmail">
-                            <Form.Label> Email <span className="req">*</span> </Form.Label>
-                            <Form.Control
-                            type="email"
-                            placeholder="voce@email.com"
-                            required
-                            className="input-pill"
-                            />
-                        </Form.Group>
-                        </Col>
-
-                        <Col md={6}>
-                        <Form.Group controlId="formEmpresa">
-                            <Form.Label> Nome da empresa <span className="req">*</span> </Form.Label>
-                            <Form.Control
-                            type="text"
-                            placeholder="Ex.: Barbecue Hellman's"
-                            required
-                            className="input-pill"
-                            />
-                        </Form.Group>
-                        </Col>
-
-                        <Col md={6}>
-                        <Form.Group controlId="formSegmento">
-                            <Form.Label> Segmento <span className="req">*</span> </Form.Label>
-                            <Form.Select required className="input-pill">
-                                <option value="">Selecione…</option>
-                                <option>E-commerce</option>
-                                <option>Website</option>
-                                <option>Outro</option>
-                            </Form.Select>
-                        </Form.Group>
-                        </Col>
-                    </Row>
-
-                    <div className="text-center mt-4">
-                        <Button type="button" variant="success" className="btn-send">
-                        Enviar Formulário <FaArrowRight className="ms-1" />
-                        </Button>
-                    </div>
-                    </Form>
-                </Card.Body>
-                </Card>
-            </Container>
-        </section>
-
+            </section>
     </>
   );
 }

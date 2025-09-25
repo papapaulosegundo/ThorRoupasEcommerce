@@ -57,6 +57,13 @@ export default function NavbarApp() {
           <Nav className="pillMenu">
             <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
             <MenuServicos />
+            
+            {user?.tipo === "admin" && (
+              <Nav.Link as={NavLink} to="/servicos/cadastros">
+                Cadastros
+              </Nav.Link>
+            )}
+
             <Nav.Link as={NavLink} to="/contato">Contato</Nav.Link>
 
             {!user ? (
@@ -67,10 +74,10 @@ export default function NavbarApp() {
                   <FiUser size={20} />
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Header>{user.nome}</Dropdown.Header>
-                  <Dropdown.Item as={Link} to="/conta">Minha conta</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item onClick={handleLogout}>Sair</Dropdown.Item>
+                    <Dropdown.Header>{user.nome}</Dropdown.Header>
+                    <Dropdown.Item as={Link} to="/conta">Minha conta</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item onClick={handleLogout}>Sair</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             )}

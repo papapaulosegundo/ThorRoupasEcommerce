@@ -5,11 +5,12 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 
-import Masculino from "./pages/services/Masculino";
-import Feminino from "./pages/services/Feminino";
-import Infantil from "./pages/services/Infantil";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
+import CadastroFormulario from "./pages/services/CadastroProdutos";
+import RequireAdmin from "./components/RequireAdmin";
+import Categorias from "./pages/services/Categorias";
+import Produtos from "./pages/services/Produtos";
 
 export default function App() {
     const { pathname } = useLocation();
@@ -23,10 +24,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contato" element={<Contact />} />
-        <Route path="/servicos/masculino" element={<Masculino />} />
-        <Route path="/servicos/feminino" element={<Feminino />} />
-        <Route path="/servicos/infantil" element={<Infantil />} />
-        
+        <Route path="/servicos/cadastros" element={<RequireAdmin> <CadastroFormulario /></RequireAdmin>}/>
+        <Route path="/servicos/categorias" element={<RequireAdmin> <Categorias /></RequireAdmin>}/>
+        <Route path="/servicos/produtos" element={<RequireAdmin> <Produtos /> </RequireAdmin>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> 
         
