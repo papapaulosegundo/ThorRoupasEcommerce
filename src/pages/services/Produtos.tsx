@@ -151,7 +151,7 @@ export default function Produtos() {
                           </Alert>
                         ) : (
                           <Form.Select
-                                value={form.idCategoria ?? ""}  // null => "", mostra placeholder
+                                value={form.idCategoria ?? ""}
                                 onChange={(e) =>
                                   set("idCategoria", e.target.value ? Number(e.target.value) : null)
                                 }

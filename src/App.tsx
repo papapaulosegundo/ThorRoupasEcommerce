@@ -11,6 +11,7 @@ import CadastroFormulario from "./pages/services/CadastroProdutos";
 import RequireAdmin from "./components/RequireAdmin";
 import Categorias from "./pages/services/Categorias";
 import Produtos from "./pages/services/Produtos";
+import CategoriaProdutosPage from "./pages/services/CategoriaProdutos";
 
 export default function App() {
     const { pathname } = useLocation();
@@ -27,6 +28,8 @@ export default function App() {
         <Route path="/servicos/cadastros" element={<RequireAdmin> <CadastroFormulario /></RequireAdmin>}/>
         <Route path="/servicos/categorias" element={<RequireAdmin> <Categorias /></RequireAdmin>}/>
         <Route path="/servicos/produtos" element={<RequireAdmin> <Produtos /> </RequireAdmin>}/>
+        <Route path="/servicos/:slug" element={<RequireAdmin> <CategoriaProdutosPage /> </RequireAdmin>} />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> 
         
