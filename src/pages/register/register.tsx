@@ -1,4 +1,3 @@
-// src/pages/Auth/Register.tsx
 import { useEffect, useMemo, useState } from "react";
 import { Container, Row, Col, Form, Button, Card, InputGroup } from "react-bootstrap";
 import "../../styles/index.css";
