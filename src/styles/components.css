@@ -291,48 +291,6 @@
 }
 .btn-ghost:hover{ background:rgba(255,255,255,.08); }
 
-/* ====== CONTACT: formulário ====== */
-.contact-form-wrap{ padding:8px 0 64px; }
-
-.contact-form-card{
-  max-width:980px; border-radius:28px;
-  background:rgba(255,255,255,.96);
-  border:1px solid rgba(31,34,68,.08);
-  box-shadow:0 12px 40px rgba(0,0,0,.20);
-  backdrop-filter: blur(2px);
-}
-
-.form-title{ font-weight:800; letter-spacing:.2px; color:var(--ink-900); }
-
-/* labels */
-.contact-form-card .form-label{
-  text-transform:uppercase; letter-spacing:.12rem; font-size:.78rem;
-  color:#8b91ab; margin-bottom:.35rem;
-}
-.req{ color:#f05454; }
-
-/* inputs pílula */
-.input-pill.form-control, .input-pill.form-select{
-  border-radius:999px; padding:.7rem 1rem;
-  border:1px solid rgba(31,34,68,.15);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
-  background:#fff;
-}
-.input-pill:focus{
-  border-color:var(--brand-700);
-  box-shadow:0 0 0 .2rem rgba(43,46,122,.15);
-}
-
-/* enviar */
-.btn-send{
-  border-radius:999px; padding:.75rem 1.35rem; font-weight:600; letter-spacing:.2px;
-  background:linear-gradient(90deg, #22c55e, #16a34a);
-  border:none; color:#fff; box-shadow:0 12px 24px rgba(34,197,94,.35);
-  transition: transform .12s ease, filter .12s ease;
-}
-.btn-send:hover{ filter:brightness(.98); transform:translateY(-1px); }
-.btn-send:active{ transform:translateY(0); }
-
 /* ====== CONTACT: mapa ====== */
 .contact-map{ padding:32px 0 72px; }
 .map-title{ font-weight:800; letter-spacing:.2px; color:var(--ink-900); }

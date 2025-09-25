@@ -57,15 +57,14 @@ export default function Home() {
 
         <Container className="position-relative">
           <div className="hero-card">
-            <small className="eyebrow">Desenvolvendo estratégias inovadoras</small>
+            <small className="eyebrow">Desenvolvendo peças inovadoras</small>
 
             <h1 className="hero-title">
-              Alavanque suas vendas.<br />
+              De Tudo Para Todos.<br />
             </h1>
 
             <p className="hero-lead">
-              Sites rápidos, reutilizáveis e prontos para escalar. Foque no seu negócio — nós
-              cuidamos do resto.
+              Tudo que seu armário precisa você encontra aqui!
             </p>
 
             <div className="actions">
@@ -130,7 +129,7 @@ export default function Home() {
 
       <section>
         <CustomerLoop
-          emphasis = "+100 marcas"
+          emphasis = "+ de 100 marcas"
           rest = "para você escolher"
           logos={LOGOS}
           speed={30}          
